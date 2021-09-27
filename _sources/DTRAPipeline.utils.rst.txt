@@ -1,0 +1,141 @@
+DTRAPipeline.utils package
+==========================
+
+Submodules
+----------
+
+DTRAPipeline.utils.SILVA16S module
+----------------------------------
+
+.. automodule:: DTRAPipeline.utils.SILVA16S
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.blastutils module
+------------------------------------
+
+.. automodule:: DTRAPipeline.utils.blastutils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.datacleaner\_updated module
+----------------------------------------------
+
+.. automodule:: DTRAPipeline.utils.datacleaner_updated
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.entrezutils module
+-------------------------------------
+
+.. automodule:: DTRAPipeline.utils.entrezutils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.features module
+----------------------------------
+
+.. automodule:: DTRAPipeline.utils.features
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.info\_utils module
+-------------------------------------
+
+.. automodule:: DTRAPipeline.utils.info_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.mfunct module
+--------------------------------
+
+.. automodule:: DTRAPipeline.utils.mfunct
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.phylogeny module
+-----------------------------------
+
+.. automodule:: DTRAPipeline.utils.phylogeny
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.plot module
+------------------------------
+
+.. automodule:: DTRAPipeline.utils.plot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.presets module
+---------------------------------
+
+.. automodule:: DTRAPipeline.utils.presets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.refeature module
+-----------------------------------
+
+.. automodule:: DTRAPipeline.utils.refeature
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.seqformatter module
+--------------------------------------
+
+.. automodule:: DTRAPipeline.utils.seqformatter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.taxonomy module
+----------------------------------
+
+.. automodule:: DTRAPipeline.utils.taxonomy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.uclustutils module
+-------------------------------------
+
+.. automodule:: DTRAPipeline.utils.uclustutils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.vienna module
+--------------------------------
+
+.. automodule:: DTRAPipeline.utils.vienna
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.utils.wrappers module
+----------------------------------
+
+.. automodule:: DTRAPipeline.utils.wrappers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: DTRAPipeline.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

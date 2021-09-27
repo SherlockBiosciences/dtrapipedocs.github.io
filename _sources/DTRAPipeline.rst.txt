@@ -1,0 +1,31 @@
+DTRAPipeline package
+====================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   DTRAPipeline.core
+   DTRAPipeline.databases
+   DTRAPipeline.utils
+
+Submodules
+----------
+
+DTRAPipeline.cmd module
+-----------------------
+
+.. automodule:: DTRAPipeline.cmd
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: DTRAPipeline
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,53 @@
+DTRAPipeline.core package
+=========================
+
+Submodules
+----------
+
+DTRAPipeline.core.EUA module
+----------------------------
+
+.. automodule:: DTRAPipeline.core.EUA
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.core.align module
+------------------------------
+
+.. automodule:: DTRAPipeline.core.align
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.core.controller module
+-----------------------------------
+
+.. automodule:: DTRAPipeline.core.controller
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.core.group module
+------------------------------
+
+.. automodule:: DTRAPipeline.core.group
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DTRAPipeline.core.parser module
+-------------------------------
+
+.. automodule:: DTRAPipeline.core.parser
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: DTRAPipeline.core
+   :members:
+   :undoc-members:
+   :show-inheritance:
