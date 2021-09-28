@@ -8,12 +8,15 @@
     <title>DTRAPipeline.core package &#8212; DTRAPipe 1.7.2 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DTRAPipeline.databases package" href="DTRAPipeline.databases.html" />
+    <link rel="prev" title="DTRAPipeline package" href="DTRAPipeline.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,23 +38,1014 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="dtrapipeline-core-eua-module">
-<h2>DTRAPipeline.core.EUA module<a class="headerlink" href="#dtrapipeline-core-eua-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-DTRAPipeline.core.EUA">
+<span id="dtrapipeline-core-eua-module"></span><h2>DTRAPipeline.core.EUA module<a class="headerlink" href="#module-DTRAPipeline.core.EUA" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.EUA.</span></span><span class="sig-name descname"><span class="pre">EUAPipe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msa</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.align.MSABase" title="DTRAPipeline.core.align.MSABase"><span class="pre">DTRAPipeline.core.align.MSABase</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.get_preset">
+<span class="sig-name descname"><span class="pre">get_preset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.get_preset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.get_reference_equivalents">
+<span class="sig-name descname"><span class="pre">get_reference_equivalents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fasta_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.get_reference_equivalents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to align all probes against the reference sequence and
+return those sequences from within the reference sequence.
+The probes will be written to a new file that will be used to
+blast against.</p>
+<p>fasta_path: str, path to probes fasta
+ref_path: str, path to reference path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.get_variant">
+<span class="sig-name descname"><span class="pre">get_variant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genome_seqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.get_variant" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.merge_sensitivity">
+<span class="sig-name descname"><span class="pre">merge_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.merge_sensitivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merges the sensitivity results with the kit analysis file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.merge_specificity">
+<span class="sig-name descname"><span class="pre">merge_specificity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.merge_specificity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merges the specificity results with the kit analysis file if it exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.multiplex_probes">
+<span class="sig-name descname"><span class="pre">multiplex_probes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">multiplex_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplex_guide_combinations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.multiplex_probes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function with the input of an EUA object which can find optimal combinations guides spread
+across multiple features often in the form of genes.</p>
+<p>Input:
+self: EUA, object with analyzed probes
+multiplex_size: int, top variants to evaluate conservation.
+multiplex_guide_combinations: int, number of probes to combine</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.pipeline">
+<span class="sig-name descname"><span class="pre">pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fasta_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negative_taxids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_specificity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_sensitivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_snps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that automatically runs the EUA pipeline.</p>
+<p>fasta_path: str, path to probes fasta
+negative_taxids: list of int to be added to negative taxids.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.proc_plot_snps">
+<span class="sig-name descname"><span class="pre">proc_plot_snps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">snp_df_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.proc_plot_snps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.pull_probe">
+<span class="sig-name descname"><span class="pre">pull_probe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.pull_probe" title="Permalink to this definition">¶</a></dt>
+<dd><p>aligns and retrieves a probe from the reference record.
+As the aligner step should already be find the reverse complemnt</p>
+<p>record: Seq, object for probe
+ref_record: Seq, object for reference record
+rc: boolean, take the reverse complement of the probe</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.run_sensitivity">
+<span class="sig-name descname"><span class="pre">run_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.run_sensitivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes the msa class’s built in sensitivity analysis</p>
+<p>probe_path: str, path to probe fasta</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.run_specificity">
+<span class="sig-name descname"><span class="pre">run_specificity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negative_taxids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.run_specificity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes the msa class’s built in specificity analysis</p>
+<p>negative_taxids: list, taxids to exclude from specificity analysis.
+db_path: str, path to nt database if not added to path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.subset">
+<span class="sig-name descname"><span class="pre">subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.subset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.tabulate">
+<span class="sig-name descname"><span class="pre">tabulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_kit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.tabulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to tabulate the msa alignment array, blast the</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.tabulate_columnwise_chars">
+<span class="sig-name descname"><span class="pre">tabulate_columnwise_chars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq_arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.tabulate_columnwise_chars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all chars at each column of an alignment array</p>
+<p>Inputs:
+seq_arr: np array of shape M x N where M is the number of observations and N is the length of each sub-sequence</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.tabulate_genes">
+<span class="sig-name descname"><span class="pre">tabulate_genes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.tabulate_genes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.tabulate_guide_aln">
+<span class="sig-name descname"><span class="pre">tabulate_guide_aln</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guide_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_kit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aln_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genome_seqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.tabulate_guide_aln" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the blast output to summarize the performance statistics for each primer/crRNA.</p>
+<p>Inputs:
+guide_name: str - must match query in blast_out
+blast_out: path to sensitivity blast
+df_kit: df containing the sequences to be analyzed - must matched the blast_out
+name_col: str - name of the col for the seq name
+seq_col: str - name of the col containing the actual sequence
+aln_arr: np array of a mafft alignment
+gap_ref: gapped reference sequence generated from the mafft alignment
+genome_seqs: list of genomic sequences joined together from the alignment</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.write_counts_excel">
+<span class="sig-name descname"><span class="pre">write_counts_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">positional_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysis_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.write_counts_excel" title="Permalink to this definition">¶</a></dt>
+<dd><p>writes an excel spreadsheet with positional indices for ever nucleotide
+in the probe.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.get_probe_SNPs">
+<span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.EUA.</span></span><span class="sig-name descname"><span class="pre">get_probe_SNPs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.get_probe_SNPs" title="Permalink to this definition">¶</a></dt>
+<dd><p>with an MSA and path to fasta probes, find the probe’s SNP locations
+msa can also be a msa fasta file or curated records file. The prob can be
+a simple probe string as well. If a path is given instead of msa type file,
+it is reccomended to set rep to the representative fasta path.</p>
+<p>Input:</p>
+<p>msa: MSABase, msa class object
+prob: str, path to fasta probes
+rep: str/bool, if str put path to representative
+prob_loc: list, list of probe loctaion integers of interest</p>
+</dd></dl>
+
 </div>
-<div class="section" id="dtrapipeline-core-align-module">
-<h2>DTRAPipeline.core.align module<a class="headerlink" href="#dtrapipeline-core-align-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-DTRAPipeline.core.align">
+<span id="dtrapipeline-core-align-module"></span><h2>DTRAPipeline.core.align module<a class="headerlink" href="#module-DTRAPipeline.core.align" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSAAuto">
+<span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.align.</span></span><span class="sig-name descname"><span class="pre">MSAAuto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.parser.FastaParse" title="DTRAPipeline.core.parser.FastaParse"><span class="pre">DTRAPipeline.core.parser.FastaParse</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSAAuto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the default Multiple sequence alignment program based on
+parser presets determined by genome size.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.align.</span></span><span class="sig-name descname"><span class="pre">MSABase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.parser.FastaParse" title="DTRAPipeline.core.parser.FastaParse"><span class="pre">DTRAPipeline.core.parser.FastaParse</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Multiple sequence alignment shared functions. Able to align seqs, generate pssm and guides.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>object object): Base form.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.annotate_features">
+<span class="sig-name descname"><span class="pre">annotate_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">records</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acc_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.annotate_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate all Seq records as they pertain to the features in the gbff file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>records (list): list of seq records
+features_df (pd.DataFrame): feature finder dataframe
+acc_id (str): string</p>
+</dd>
+<dt>Returns:</dt><dd><p>list: list of Bio.Seq.Seq objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.base_file_name">
+<span class="sig-name descname"><span class="pre">base_file_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.base_file_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.cut_guides">
+<span class="sig-name descname"><span class="pre">cut_guides</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guide_size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rois</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sour_fasta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.cut_guides" title="Permalink to this definition">¶</a></dt>
+<dd><p>function to cut down the number of guides from N rois</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>guide_size (int): size of guides
+rois (list): roi array
+sour_fasta (str, optional): [description]. Defaults to None.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: number of guides</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_accession_id">
+<span class="sig-name descname"><span class="pre">get_accession_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_accession_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pull accession id from fasta header of representative file</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>str: accession id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_curated_fasta">
+<span class="sig-name descname"><span class="pre">get_curated_fasta</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_curated_fasta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_feature_finder">
+<span class="sig-name descname"><span class="pre">get_feature_finder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_feature_finder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve feature finder module from features.py</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>FeatureFinder: annotates features from reference genome gbff</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_features_df">
+<span class="sig-name descname"><span class="pre">get_features_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">acc_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_features_df" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the features dataframe containing info about all features in a particular genome.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>acc_id (str, optional): ncbi Accession ID. Defaults to None.</p>
+</dd>
+<dt>Returns:</dt><dd><p>pandas.Dataframe: features dataframe
+str: accessiod ID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_filtered_refs_df">
+<span class="sig-name descname"><span class="pre">get_filtered_refs_df</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_filtered_refs_df" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to quickly retrieve paramaters df</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>pandas.DataFrame: dataframe containing paramaters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_preset">
+<span class="sig-name descname"><span class="pre">get_preset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_preset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_preset_adjusted">
+<span class="sig-name descname"><span class="pre">get_preset_adjusted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_preset_adjusted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_preset_guide_size">
+<span class="sig-name descname"><span class="pre">get_preset_guide_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_preset_guide_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_pssm_perc">
+<span class="sig-name descname"><span class="pre">get_pssm_perc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_pssm_perc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_refseq_rois">
+<span class="sig-name descname"><span class="pre">get_refseq_rois</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">consensus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensitivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">94</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_refseq_rois" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to retrieve the rois based on the set representative.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_refseq_tiles">
+<span class="sig-name descname"><span class="pre">get_refseq_tiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">consensus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensitivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">94</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_refseq_tiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function to retrieve tiles from consensus structures, tile them,
+and retrive the appropriate refseq counterparts.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_representative_path">
+<span class="sig-name descname"><span class="pre">get_representative_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_representative_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_roi_cutoff">
+<span class="sig-name descname"><span class="pre">get_roi_cutoff</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_roi_cutoff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_subject_fasta">
+<span class="sig-name descname"><span class="pre">get_subject_fasta</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_subject_fasta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_taxids">
+<span class="sig-name descname"><span class="pre">get_taxids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_taxids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_tile_window">
+<span class="sig-name descname"><span class="pre">get_tile_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_tile_window" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.get_uncurated_fasta">
+<span class="sig-name descname"><span class="pre">get_uncurated_fasta</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.get_uncurated_fasta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.guide_features_annotate">
+<span class="sig-name descname"><span class="pre">guide_features_annotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">acc_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guides_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.guide_features_annotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that pulls a genbank file from either a given acc_id or automatically
+from the set representative or top record in the curated_records file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>acc_id (str, optional): ncbi accesion id ex. NC_045512.2. Defaults to None.
+guides_path (str, optional): path to guides file to convert. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.process_blast_tiles">
+<span class="sig-name descname"><span class="pre">process_blast_tiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_seqs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.process_blast_tiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pull out blast tiles if exist in sensitivity or specificity step.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>option (str): specificity or sensitivity
+t_seqs (list): list of tile seqs
+headers (list): list of headers</p>
+</dd>
+<dt>Returns:</dt><dd><p>list: list of tiles</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.save_params">
+<span class="sig-name descname"><span class="pre">save_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.save_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save parameters to local file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.set_blast_utils">
+<span class="sig-name descname"><span class="pre">set_blast_utils</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.set_blast_utils" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.set_representative_path">
+<span class="sig-name descname"><span class="pre">set_representative_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_ref</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.set_representative_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set project representative path</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>new_ref (str]): path to representative</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.subsample_crrna_optimized_guides">
+<span class="sig-name descname"><span class="pre">subsample_crrna_optimized_guides</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roi_tiles</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.subsample_crrna_optimized_guides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subsamples the roi tiles and finds the top unpaired crRNAs per gene without exceeding the max guides per run.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>roi_tiles (list): [description]
+annotate (bool, optional): [description]. Defaults to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list: list of guides</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MSABase.write_probes">
+<span class="sig-name descname"><span class="pre">write_probes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guides_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MSABase.write_probes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write probes</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>guides_path (str, optional): [description]. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MafftMSA">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.align.</span></span><span class="sig-name descname"><span class="pre">MafftMSA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.parser.FastaParse" title="DTRAPipeline.core.parser.FastaParse"><span class="pre">DTRAPipeline.core.parser.FastaParse</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MafftMSA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DTRAPipeline.core.align.MSABase" title="DTRAPipeline.core.align.MSABase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DTRAPipeline.core.align.MSABase</span></code></a></p>
+<p>Class for the handling of mafft MSA features including: running mafft for a MSA output,
+loading an existing MSA, scoring the consensus threshold</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MafftMSA.auto">
+<span class="sig-name descname"><span class="pre">auto</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MafftMSA.auto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to automatically run mafft alignment to guide sensitivity generation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MafftMSA.mafft_alignment">
+<span class="sig-name descname"><span class="pre">mafft_alignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fasta_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_outliers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MafftMSA.mafft_alignment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MafftMSA.set_alignment">
+<span class="sig-name descname"><span class="pre">set_alignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msa_fasta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MafftMSA.set_alignment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MafftMSA.write_universal_regions">
+<span class="sig-name descname"><span class="pre">write_universal_regions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sour_fasta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msa_fasta_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guide_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pssm_perc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MafftMSA.write_universal_regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section that attempts to find the refseq rois and universal probes to write to a file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MauveMSA">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.align.</span></span><span class="sig-name descname"><span class="pre">MauveMSA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.parser.FastaParse" title="DTRAPipeline.core.parser.FastaParse"><span class="pre">DTRAPipeline.core.parser.FastaParse</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MauveMSA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DTRAPipeline.core.align.MSABase" title="DTRAPipeline.core.align.MSABase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DTRAPipeline.core.align.MSABase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MauveMSA.auto">
+<span class="sig-name descname"><span class="pre">auto</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MauveMSA.auto" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MauveMSA.draw_tree">
+<span class="sig-name descname"><span class="pre">draw_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MauveMSA.draw_tree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MauveMSA.get_universal_guides">
+<span class="sig-name descname"><span class="pre">get_universal_guides</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kmer_cons_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MauveMSA.get_universal_guides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section that attempts to find the refseq rois and universal probes to write to a file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MauveMSA.mauve_alignment">
+<span class="sig-name descname"><span class="pre">mauve_alignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fasta_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MauveMSA.mauve_alignment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MauveMSA.parse_pmauve_bbone">
+<span class="sig-name descname"><span class="pre">parse_pmauve_bbone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensitivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.98</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guide_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">28</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MauveMSA.parse_pmauve_bbone" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function parses a progressiveMauve alignment backbone file to pull out the ROI’s
+that meet a predetermined sensitivity threshold. By default, df_r2 is sorted by length with the longest
+sequence first. Consequently, Mauve sets the first (longest) sequence as the reference.</p>
+<p>Inputs:
+fpath: path to progressiveMauve backbone file
+df_r2: df of curated sequences that were used to generate the progressiveMauve alignment.
+sensitivity: sensitivity threshold (0,1)
+length_cutoff: length threshold for segment; segments smaller than this are discarded</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.align.MauveMSA.set_mauve_paths">
+<span class="sig-name descname"><span class="pre">set_mauve_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original_fasta_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.align.MauveMSA.set_mauve_paths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="dtrapipeline-core-controller-module">
-<h2>DTRAPipeline.core.controller module<a class="headerlink" href="#dtrapipeline-core-controller-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-DTRAPipeline.core.controller">
+<span id="dtrapipeline-core-controller-module"></span><h2>DTRAPipeline.core.controller module<a class="headerlink" href="#module-DTRAPipeline.core.controller" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.controller.</span></span><span class="sig-name descname"><span class="pre">ProbeBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.eval_params">
+<span class="sig-name descname"><span class="pre">eval_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.eval_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.get_default_params">
+<span class="sig-name descname"><span class="pre">get_default_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'basic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.get_default_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function to write the default parameters with the inital settings.
+There are two settings, basic and advanced.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.get_new_eua">
+<span class="sig-name descname"><span class="pre">get_new_eua</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.get_new_eua" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.get_new_msa">
+<span class="sig-name descname"><span class="pre">get_new_msa</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.get_new_msa" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.get_new_parser">
+<span class="sig-name descname"><span class="pre">get_new_parser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.get_new_parser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.get_refeature">
+<span class="sig-name descname"><span class="pre">get_refeature</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.get_refeature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.load_auto_entrez">
+<span class="sig-name descname"><span class="pre">load_auto_entrez</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.load_auto_entrez" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.msa_init">
+<span class="sig-name descname"><span class="pre">msa_init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.msa_init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.msa_requires_centroid">
+<span class="sig-name descname"><span class="pre">msa_requires_centroid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msa</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.align.MSABase" title="DTRAPipeline.core.align.MSABase"><span class="pre">DTRAPipeline.core.align.MSABase</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.msa_requires_centroid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.parse_files">
+<span class="sig-name descname"><span class="pre">parse_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.parse_files" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.run_centroids">
+<span class="sig-name descname"><span class="pre">run_centroids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.run_centroids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.run_refeatures">
+<span class="sig-name descname"><span class="pre">run_refeatures</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.run_refeatures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.set_refeature_presets">
+<span class="sig-name descname"><span class="pre">set_refeature_presets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.set_refeature_presets" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function that resets key parameters to better suit the refeature module.
+The defaults listed here will only replace the existing parameters if they
+are not yet set in any capacity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeBase.wrap_isr_pipeline">
+<span class="sig-name descname"><span class="pre">wrap_isr_pipeline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeBase.wrap_isr_pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap and execute the isr prediction pipeline from a local copy of the ISR pipeline.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeEval">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.controller.</span></span><span class="sig-name descname"><span class="pre">ProbeEval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeEval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DTRAPipeline.core.controller.ProbeBase" title="DTRAPipeline.core.controller.ProbeBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DTRAPipeline.core.controller.ProbeBase</span></code></a></p>
+<p>In Development</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeEval.eua_files">
+<span class="sig-name descname"><span class="pre">eua_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeEval.eua_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the EUA analysis pipeline to quantify the guides created and multiplex probes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeEval.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeEval.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeEval.set_probe_path">
+<span class="sig-name descname"><span class="pre">set_probe_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeEval.set_probe_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeGen">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.controller.</span></span><span class="sig-name descname"><span class="pre">ProbeGen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeGen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DTRAPipeline.core.controller.ProbeBase" title="DTRAPipeline.core.controller.ProbeBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DTRAPipeline.core.controller.ProbeBase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeGen.align_files">
+<span class="sig-name descname"><span class="pre">align_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeGen.align_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to align files and run the specificity step if option is set to True in the parameters file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeGen.blast_files">
+<span class="sig-name descname"><span class="pre">blast_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_N_guides_output</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeGen.blast_files" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeGen.eua_files">
+<span class="sig-name descname"><span class="pre">eua_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeGen.eua_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the EUA analysis pipeline to quantify the guides created and multiplex probes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.controller.ProbeGen.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.controller.ProbeGen.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="dtrapipeline-core-group-module">
-<h2>DTRAPipeline.core.group module<a class="headerlink" href="#dtrapipeline-core-group-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-DTRAPipeline.core.group">
+<span id="dtrapipeline-core-group-module"></span><h2>DTRAPipeline.core.group module<a class="headerlink" href="#module-DTRAPipeline.core.group" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.group.</span></span><span class="sig-name descname"><span class="pre">GroupBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.parser.FastaParse" title="DTRAPipeline.core.parser.FastaParse"><span class="pre">DTRAPipeline.core.parser.FastaParse</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base Group object for attibutes and methods necessary for ingroups and outgroups.</p>
+<p>Paramaters:
+FastaParse from core.parser FastaParse object.
+Should have already loaded fasta files if ingroup otherwise it can be left empty.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase.base_file_name">
+<span class="sig-name descname"><span class="pre">base_file_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase.base_file_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase.compute_groups">
+<span class="sig-name descname"><span class="pre">compute_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sour_guide_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sour_scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merged_sig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase.compute_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes sighash sourmash signatures for either grouping.</p>
+<p>sour_guide_size: int, kmer size
+sour_scaled: int, genome downscaling
+merged_sig: bool, merge the signatures into an individual hash or concatenate them
+fname: str, signature stem file name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase.create_compare_jaccard">
+<span class="sig-name descname"><span class="pre">create_compare_jaccard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signature_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csv_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default_jdist.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase.create_compare_jaccard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class tha creates a jaccard index using sourmash. Signature must not be merged.</p>
+<p>signature_path: str, path to concatenated signature path
+csv_out: str, the jacarrd distance array in csv form to save to
+plot: bool, plot the jaccard index</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase.get_curated_fasta">
+<span class="sig-name descname"><span class="pre">get_curated_fasta</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase.get_curated_fasta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase.get_filtered_df">
+<span class="sig-name descname"><span class="pre">get_filtered_df</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase.get_filtered_df" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase.get_preset_sour_guide_size">
+<span class="sig-name descname"><span class="pre">get_preset_sour_guide_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase.get_preset_sour_guide_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase.get_preset_sour_scaled">
+<span class="sig-name descname"><span class="pre">get_preset_sour_scaled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase.get_preset_sour_scaled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase.load_index">
+<span class="sig-name descname"><span class="pre">load_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase.load_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase.load_signature">
+<span class="sig-name descname"><span class="pre">load_signature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase.load_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads signature files from sourmash from path if given otherwise
+searches for existing path. Can load a merged hash signature
+or an concatenated signature hash table collection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.GroupBase.set_signature_path">
+<span class="sig-name descname"><span class="pre">set_signature_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signature_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.GroupBase.set_signature_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.InGroup">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.group.</span></span><span class="sig-name descname"><span class="pre">InGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.parser.FastaParse" title="DTRAPipeline.core.parser.FastaParse"><span class="pre">DTRAPipeline.core.parser.FastaParse</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.InGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DTRAPipeline.core.group.GroupBase" title="DTRAPipeline.core.group.GroupBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DTRAPipeline.core.group.GroupBase</span></code></a></p>
+<p>InGroup signature containing the signatures from desired targets to create the kmer guides</p>
+<p>parser: FastaParse, parser object that has already loaded all ingroup genomes that have been
+curated.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.InGroup.compute_groups">
+<span class="sig-name descname"><span class="pre">compute_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sour_guide_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">31</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sour_scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merged_sig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.InGroup.compute_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes sighash sourmash signatures for either grouping.</p>
+<p>sour_guide_size: int, kmer size
+sour_scaled: int, genome downscaling
+merged_sig: bool, merge the signatures into an individual hash or concatenate them
+fname: str, signature stem file name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.InGroup.get_consensus_threshold">
+<span class="sig-name descname"><span class="pre">get_consensus_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.InGroup.get_consensus_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to assist in choosing the optimal consensus threshold.</p>
+<p>start: float, 0.0 - 1.0 to start from
+end: float, start - 1.0 to end from</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.InGroup.get_hashes">
+<span class="sig-name descname"><span class="pre">get_hashes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.InGroup.get_hashes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.InGroup.get_kmer_consensus">
+<span class="sig-name descname"><span class="pre">get_kmer_consensus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kmerdict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.InGroup.get_kmer_consensus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chosen consensus threshold of all kmers across genomes to keep.</p>
+<p>kmerdict: dict, obtained from get_kmers_from_hash() or other chosen hashes
+threshold: float, percentage of all samples the kmer must occur in for consideration</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.InGroup.get_kmers_from_hash">
+<span class="sig-name descname"><span class="pre">get_kmers_from_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_hashes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.InGroup.get_kmers_from_hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inputs:
+query_hash: list of hashes to retrieve
+top: int, only keep the top n kmers</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.InGroup.get_reverse_complement">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_reverse_complement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.InGroup.get_reverse_complement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.InGroup.subtract_outgroup">
+<span class="sig-name descname"><span class="pre">subtract_outgroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outgroup_object</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.group.OutGroup" title="DTRAPipeline.core.group.OutGroup"><span class="pre">DTRAPipeline.core.group.OutGroup</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.InGroup.subtract_outgroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove outgroup hashes from merged ingroup hashes.</p>
+<p>outgroup_object: OutGroup, OutGroup object that has loaded the fda outgroup signatures
+and completed the create_pathogen_outgroup() method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.InGroup.write_consensus">
+<span class="sig-name descname"><span class="pre">write_consensus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kmer_consensus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kmerdict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.InGroup.write_consensus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes all kmers as they correspond to every genome in parser. An option that is incompatible with
+other downstream operations within the pipeline.</p>
+<p>kmer_consensus: list, of kmers to consider writing to fasta file as they correspond to every genome.
+kmerdict: dict, from get_kmers_from_hash. Unnecessary if the function has already been run. Can be used with</p>
+<blockquote>
+<div><p>other kmerdicts</p>
+</div></blockquote>
+<p>base_file_name: str, name of pathogen to be used in stem of name file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.InGroup.write_rep_consensus">
+<span class="sig-name descname"><span class="pre">write_rep_consensus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kmer_consensus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rep_ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.InGroup.write_rep_consensus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the kmers based on the sorted genomes in parser starting with the longest. The representative
+genome can be changed by changing the rep_ind parameter.</p>
+<p>kmer_consensus: list, of kmers to consider writing to fasta file given their presence in the representative
+base_file_name: str, name of pathogen to be used in stem of name file.
+rep_ind: int, number from top of parser genomes to be used as the representative
+plot: bool, plot and write or simply write if False</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.OutGroup">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.group.</span></span><span class="sig-name descname"><span class="pre">OutGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.parser.FastaParse" title="DTRAPipeline.core.parser.FastaParse"><span class="pre">DTRAPipeline.core.parser.FastaParse</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.OutGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#DTRAPipeline.core.group.GroupBase" title="DTRAPipeline.core.group.GroupBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DTRAPipeline.core.group.GroupBase</span></code></a></p>
+<p>The OutGroup object is all genomes outside of the target group.</p>
+<p>parser: FastaParse, need not be loaded if signatures have already been created.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.OutGroup.create_pathogen_outgroup">
+<span class="sig-name descname"><span class="pre">create_pathogen_outgroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathogen_terms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.OutGroup.create_pathogen_outgroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>creates a pathogen specific signature from a premade comprehensive signature from fda
+pathogens.</p>
+<p>pathogen_terms: list, list of terms related to the pathogen to be removed from outgroup.
+base_file_name: str, name to be used for outgroup signature file name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.OutGroup.load_index">
+<span class="sig-name descname"><span class="pre">load_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.OutGroup.load_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.OutGroup.load_signature">
+<span class="sig-name descname"><span class="pre">load_signature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.OutGroup.load_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads signature files from sourmash from path if given otherwise
+searches for existing path. Can load a merged hash signature
+or an concatenated signature hash table collection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.group.OutGroup.search_groups">
+<span class="sig-name descname"><span class="pre">search_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_group_object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sour_scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.group.OutGroup.search_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inputs:
+df_r2: cleaned_df of genomic sequences
+base_file_name: str - name of the pathogen
+out_dir: str - path to dir where alignment should be stored</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="dtrapipeline-core-parser-module">
-<h2>DTRAPipeline.core.parser module<a class="headerlink" href="#dtrapipeline-core-parser-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-DTRAPipeline.core.parser">
+<span id="dtrapipeline-core-parser-module"></span><h2>DTRAPipeline.core.parser module<a class="headerlink" href="#module-DTRAPipeline.core.parser" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.parser.</span></span><span class="sig-name descname"><span class="pre">FastaParse</span></span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Object for parseing through fasta files to curate based on size and name. Has the ability
+to load individual fasta files into a singular file as well as write curated fasta files.</p>
+<p>parse_input_records should be called first if a concatenated fasta file of ingroup pathogens
+as the entrez wrapper method does by calling the nucleotide database otherwise download using
+utils.taxonomy and concatenate the genomes using write_cat_fasta.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.filter_header_term">
+<span class="sig-name descname"><span class="pre">filter_header_term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.filter_header_term" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a list of terms to filter from the fasta headers. Will then replot the remaining
+distribution.
+terms: list, Need not be exact matches for entire value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the current set parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>current paramaters</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.get_parser_required">
+<span class="sig-name descname"><span class="pre">get_parser_required</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fasta_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genome_size_cutoff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genome_cutoff_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deduplicate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.get_parser_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve all parameter info from presets if not explicitly set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fasta_file</strong> (<em>str</em>) – fasta path</p></li>
+<li><p><strong>genome_size_cutoff</strong> (<em>float</em>) – genome size cutoff percent</p></li>
+<li><p><strong>genome_cutoff_type</strong> (<em>str</em>) – median or max threshold method</p></li>
+<li><p><strong>deduplicate</strong> (<em>bool</em>) – remove duplicates</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>retrieved required parameters</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str, float, str, bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.get_seq_len">
+<span class="sig-name descname"><span class="pre">get_seq_len</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.get_seq_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>[summary]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path to fasta file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>sequence length</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.make_all_supporting_directories">
+<span class="sig-name descname"><span class="pre">make_all_supporting_directories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.make_all_supporting_directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate supporting directories for pipeline run.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.parse_input_records">
+<span class="sig-name descname"><span class="pre">parse_input_records</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fasta_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genome_size_cutoff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_single</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genome_cutoff_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platform</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'SLK'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deduplicate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.parse_input_records" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function parses an input multi-record fasta file containing the genomes of the target pathogen.
+If genome_size_cutoff is desired, then the float is a fraction of the largest record length in the set.
+If write_single is desired, then multi_record files are converted into single entry fasta files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fasta_file</strong> (<em>str</em><em>, </em><em>optional</em>) – path to fasta, defaults to None</p></li>
+<li><p><strong>out_dir</strong> (<em>str</em><em>, </em><em>optional</em>) – directory to print out to, defaults to ‘’</p></li>
+<li><p><strong>genome_size_cutoff</strong> (<em>float</em><em>, </em><em>optional</em>) – percent cutoff, defaults to False</p></li>
+<li><p><strong>write_single</strong> (<em>bool</em><em>, </em><em>optional</em>) – write files to single fasta, defaults to False</p></li>
+<li><p><strong>plot</strong> (<em>bool</em><em>, </em><em>optional</em>) – plot curation analysis, defaults to True</p></li>
+<li><p><strong>genome_cutoff_type</strong> (<em>float</em><em>, </em><em>optional</em>) – max or median cutoff thresholding, defaults to None</p></li>
+<li><p><strong>platform</strong> (<em>str</em><em>, </em><em>optional</em>) – SLK or ISR, defaults to ‘SLK’</p></li>
+<li><p><strong>preset_type</strong> (<em>str</em><em>, </em><em>optional</em>) – Small Medium or Large, defaults to None</p></li>
+<li><p><strong>deduplicate</strong> (<em>bool</em><em>, </em><em>optional</em>) – remove duplicate sequences except first occurance, defaults to False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.require_header_term">
+<span class="sig-name descname"><span class="pre">require_header_term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">term</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.require_header_term" title="Permalink to this definition">¶</a></dt>
+<dd><p>only keeps fasta headers with str
+term: str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.reset_preset">
+<span class="sig-name descname"><span class="pre">reset_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.reset_preset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set parameters for the pipeline, need not be comprehensive, can accept partial parameter dicts</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – dictionary containing preset values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.set_tax_info">
+<span class="sig-name descname"><span class="pre">set_tax_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">NCBI_pathogen_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'SLK'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.set_tax_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve taxonomic information for project to aid automated parameter tweaking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NCBI_pathogen_name</strong> (<em>str</em><em>, </em><em>optional</em>) – NCBI taxonomy pathogen name, defaults to None</p></li>
+<li><p><strong>platform</strong> (<em>str</em><em>, </em><em>optional</em>) – [description], defaults to ‘SLK’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.write_cat_fasta">
+<span class="sig-name descname"><span class="pre">write_cat_fasta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dir_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_file_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'.fna'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_fmt</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'fasta'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.write_cat_fasta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a single multi-fasta file given a series of genbank files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dir_name</strong> (<em>str</em>) – path to directory containing all the genbank files</p></li>
+<li><p><strong>base_file_name</strong> (<em>str</em><em>, </em><em>optional</em>) – base file name for all output files, defaults to None</p></li>
+<li><p><strong>extension_name</strong> (<em>str</em><em>, </em><em>optional</em>) – genbank file ending, defaults to ‘.fna’</p></li>
+<li><p><strong>file_fmt</strong> (<em>str</em><em>, </em><em>optional</em>) – ‘fasta’ or ‘gb’, defaults to ‘fasta’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>curated fasta df, fasta path</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.write_curated_fasta">
+<span class="sig-name descname"><span class="pre">write_curated_fasta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">out_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep_ref</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.write_curated_fasta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write out a fasta which has been curated based on uniqueness and sequence length.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>out_dir</strong> (<em>str</em><em>, </em><em>optional</em>) – directory path for curated records, defaults to ‘’</p></li>
+<li><p><strong>fname</strong> (<em>str</em><em>, </em><em>optional</em>) – [description], defaults to None</p></li>
+<li><p><strong>sep_ref</strong> (<em>bool</em><em>, </em><em>optional</em>) – seperate longest seq as reference, defaults to False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>curated filename</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="DTRAPipeline.core.parser.FastaParse.write_singles">
+<span class="sig-name descname"><span class="pre">write_singles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_r2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_single</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.parser.FastaParse.write_singles" title="Permalink to this definition">¶</a></dt>
+<dd><p>[summary]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df_r2</strong> (<em>pd.DataFrame</em>) – dataframe of sequences</p></li>
+<li><p><strong>out_dir</strong> (<em>str</em>) – path to output directory</p></li>
+<li><p><strong>write_single</strong> (<em>bool</em>) – write singular files.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-DTRAPipeline.core">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DTRAPipeline.core" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -72,11 +1066,30 @@
 
 
 <h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="DTRAPipeline.html">DTRAPipeline package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="DTRAPipeline.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DTRAPipeline.core package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DTRAPipeline.databases.html">DTRAPipeline.databases package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DTRAPipeline.utils.html">DTRAPipeline.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DTRAPipeline.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DTRAPipeline.html#module-DTRAPipeline.cmd">DTRAPipeline.cmd module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DTRAPipeline.html#module-DTRAPipeline">Module contents</a></li>
+</ul>
+</li>
+</ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="DTRAPipeline.html">DTRAPipeline package</a><ul>
+      <li>Previous: <a href="DTRAPipeline.html" title="previous chapter">DTRAPipeline package</a></li>
+      <li>Next: <a href="DTRAPipeline.databases.html" title="next chapter">DTRAPipeline.databases package</a></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>
