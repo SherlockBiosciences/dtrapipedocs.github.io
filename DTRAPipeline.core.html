@@ -44,37 +44,83 @@
 <dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.EUA.</span></span><span class="sig-name descname"><span class="pre">EUAPipe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msa</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.align.MSABase" title="DTRAPipeline.core.align.MSABase"><span class="pre">DTRAPipeline.core.align.MSABase</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>EUA analysis of a probe set which annotates the sensitivity, specificity, probe
+SNPs, multiplexes probes</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.get_preset">
 <span class="sig-name descname"><span class="pre">get_preset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.get_preset" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Method to retrieve the preset object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>preset value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Preset</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.get_reference_equivalents">
-<span class="sig-name descname"><span class="pre">get_reference_equivalents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fasta_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.get_reference_equivalents" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_reference_equivalents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fasta_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.get_reference_equivalents" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to align all probes against the reference sequence and
 return those sequences from within the reference sequence.
 The probes will be written to a new file that will be used to
 blast against.</p>
-<p>fasta_path: str, path to probes fasta
-ref_path: str, path to reference path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fasta_path</strong> (<em>str</em>) – path to probes fasta</p></li>
+<li><p><strong>ref_path</strong> (<em>str</em><em>, </em><em>optional</em>) – path to reference path, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>new path, df of results</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str, pd.DataFrame</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.get_variant">
-<span class="sig-name descname"><span class="pre">get_variant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genome_seqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.get_variant" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_variant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kit_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genome_seqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.get_variant" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.merge_sensitivity">
-<span class="sig-name descname"><span class="pre">merge_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.merge_sensitivity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Merges the sensitivity results with the kit analysis file</p>
+<span class="sig-name descname"><span class="pre">merge_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kit_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.merge_sensitivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merges the sensitivity results with the kit analysis file. If the preset has tabulate_curated_sensitivity
+set to True, then this analysis will be run at this step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kit_df</strong> (<em>pd.DataFrame</em>) – kit analysis dataframe</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>kit analysis dataframe with blast sensitivity information</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.Dataframe</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.merge_specificity">
-<span class="sig-name descname"><span class="pre">merge_specificity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.merge_specificity" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">merge_specificity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kit_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.merge_specificity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Merges the specificity results with the kit analysis file if it exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kit_df</strong> (<em>pd.DataFrame</em>) – kit analysis dataframe</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>kit analysis with extra details</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -97,11 +143,6 @@ negative_taxids: list of int to be added to negative taxids.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.proc_plot_snps">
-<span class="sig-name descname"><span class="pre">proc_plot_snps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">snp_df_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.proc_plot_snps" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.pull_probe">
 <span class="sig-name descname"><span class="pre">pull_probe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.pull_probe" title="Permalink to this definition">¶</a></dt>
 <dd><p>aligns and retrieves a probe from the reference record.
@@ -112,80 +153,51 @@ rc: boolean, take the reverse complement of the probe</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.run_sensitivity">
-<span class="sig-name descname"><span class="pre">run_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.run_sensitivity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Executes the msa class’s built in sensitivity analysis</p>
-<p>probe_path: str, path to probe fasta</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.run_specificity">
-<span class="sig-name descname"><span class="pre">run_specificity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negative_taxids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.run_specificity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Executes the msa class’s built in specificity analysis</p>
-<p>negative_taxids: list, taxids to exclude from specificity analysis.
-db_path: str, path to nt database if not added to path</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.subset">
-<span class="sig-name descname"><span class="pre">subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.subset" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.tabulate">
-<span class="sig-name descname"><span class="pre">tabulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probe_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_kit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.tabulate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Method to tabulate the msa alignment array, blast the</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.tabulate_columnwise_chars">
-<span class="sig-name descname"><span class="pre">tabulate_columnwise_chars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq_arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.tabulate_columnwise_chars" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of all chars at each column of an alignment array</p>
-<p>Inputs:
-seq_arr: np array of shape M x N where M is the number of observations and N is the length of each sub-sequence</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.tabulate_genes">
-<span class="sig-name descname"><span class="pre">tabulate_genes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.tabulate_genes" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.tabulate_guide_aln">
-<span class="sig-name descname"><span class="pre">tabulate_guide_aln</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guide_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_kit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aln_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genome_seqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.tabulate_guide_aln" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parse the blast output to summarize the performance statistics for each primer/crRNA.</p>
-<p>Inputs:
-guide_name: str - must match query in blast_out
-blast_out: path to sensitivity blast
-df_kit: df containing the sequences to be analyzed - must matched the blast_out
-name_col: str - name of the col for the seq name
-seq_col: str - name of the col containing the actual sequence
-aln_arr: np array of a mafft alignment
-gap_ref: gapped reference sequence generated from the mafft alignment
-genome_seqs: list of genomic sequences joined together from the alignment</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="DTRAPipeline.core.EUA.EUAPipe.write_counts_excel">
-<span class="sig-name descname"><span class="pre">write_counts_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">positional_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysis_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.write_counts_excel" title="Permalink to this definition">¶</a></dt>
-<dd><p>writes an excel spreadsheet with positional indices for ever nucleotide
-in the probe.</p>
+<span class="sig-name descname"><span class="pre">subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.EUAPipe.subset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all combination of array elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>list</em>) – list of elements</p></li>
+<li><p><strong>r</strong> (<em>int</em>) – combi number</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>all combinations</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="DTRAPipeline.core.EUA.get_probe_SNPs">
-<span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.EUA.</span></span><span class="sig-name descname"><span class="pre">get_probe_SNPs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.get_probe_SNPs" title="Permalink to this definition">¶</a></dt>
-<dd><p>with an MSA and path to fasta probes, find the probe’s SNP locations
+<span class="sig-prename descclassname"><span class="pre">DTRAPipeline.core.EUA.</span></span><span class="sig-name descname"><span class="pre">get_probe_SNPs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msa</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#DTRAPipeline.core.align.MSABase" title="DTRAPipeline.core.align.MSABase"><span class="pre">DTRAPipeline.core.align.MSABase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob_loc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DTRAPipeline.core.EUA.get_probe_SNPs" title="Permalink to this definition">¶</a></dt>
+<dd><p>With an MSA and path to fasta probes, find the probe’s SNP locations
 msa can also be a msa fasta file or curated records file. The prob can be
 a simple probe string as well. If a path is given instead of msa type file,
 it is reccomended to set rep to the representative fasta path.</p>
-<p>Input:</p>
-<p>msa: MSABase, msa class object
-prob: str, path to fasta probes
-rep: str/bool, if str put path to representative
-prob_loc: list, list of probe loctaion integers of interest</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msa</strong> (<a class="reference internal" href="#DTRAPipeline.core.align.MSABase" title="DTRAPipeline.core.align.MSABase"><em>MSABase</em></a>) – msa class object</p></li>
+<li><p><strong>prob</strong> (<em>str</em>) – path to probes</p></li>
+<li><p><strong>rep</strong> (<em>str</em><em>, </em><em>optional</em>) – path to representative, defaults to True</p></li>
+<li><p><strong>prob_loc</strong> (<em>list</em><em>, </em><em>optional</em>) – , defaults to None</p></li>
+<li><p><strong>threads</strong> (<em>int</em><em>, </em><em>optional</em>) – cpu cores, defaults to 30</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>snp dataframe</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
